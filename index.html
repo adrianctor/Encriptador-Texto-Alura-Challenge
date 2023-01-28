@@ -13,7 +13,35 @@
         <link rel="icon" type="image/x-icon" href="src/img/icono.png" />
     </head>
     <body>
-
+        <header>
+            <h1><img class="logo-header" src="src/img/logo.png" alt="Logo de Alura"></h1>
+        </header>
+        <div class="principal">
+            <div class="formulario">
+                <form action="">
+                    <div class="centrado">
+                        <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="13" placeholder="Ingrese el texto aquí" wrap="hard"></textarea>
+                        <p class="texto-auxiliar">
+                            <img class="icono-informacion"src="src/img/exclamation-circle-fill.svg" alt="Icono información">
+                            Sólo letras minúsculas y sin acentos
+                        </p>
+                    </div>
+                    <div class="botones">
+                        <button class="boton-principal encriptar">Encriptar</button>
+                        <button class="boton-principal desencriptar">Desencriptar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="bloque-resultado">
+                <div style="display: block;">
+                    <img class="imagen-resultado" src="src/img/muñeco.png" alt="Animación de muñeco">
+                    <div>
+                        <p class="resultado">Ningún mensaje fue<br>encontrado</p>
+                        <p class="pista">Ingresa el texto que desees encriptar o<br>desencriptar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>     
     </body>
     <footer>
 

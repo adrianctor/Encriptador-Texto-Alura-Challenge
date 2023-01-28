@@ -2,3 +2,121 @@ body{
     font-family: 'Montserrat', sans-serif;
     background: #E5E5E5;
 }
+.logo-header{
+    margin: 40px 0 0 40px;
+    border-radius: 0px;
+}
+.principal{
+    width: 1349px;
+    display: inline-flex;
+}
+.formulario{
+    width: 67%;
+}
+.centrado{
+    width: 50%;
+    margin: 0 auto;
+}
+#texto-encriptar{
+    width: 577px;
+    resize: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+    color: #0A3871;
+    border: none;
+    background: #E5E5E5;
+    margin-top: 80px;
+}
+#texto-encriptar::placeholder{
+    color: #0A3871;
+}
+.texto-auxiliar{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #495057;
+
+    opacity: 0.8;
+}
+.icono-informacion{
+    padding: 0 0;
+}
+.botones{
+    margin: 10px 0 72px 240px;
+}
+.boton-principal{
+    padding: 24px;
+    border-radius: 24px;
+    border: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 328px;
+    height: 67px;
+    display: inline;
+}
+.encriptar{
+    background: #0A3871;
+    color: white;
+}
+.desencriptar{
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 2px solid #0A3871;
+}
+.bloque-resultado{
+    width: 29%;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+}
+.imagen-resultado{
+    width: 336px;
+height: 304px;
+}
+.resultado{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343A40;
+    margin-top: 15px;
+}
+.pista{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+    margin-top: 16px;
+}
