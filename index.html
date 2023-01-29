@@ -21,15 +21,15 @@
                 </header>
                 <form action="">
                     <div class="centrado">
-                        <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="13" placeholder="Ingrese el texto aquí" wrap="hard"></textarea>
+                        <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="6" placeholder="Ingrese el texto aquí" wrap="hard" required></textarea>
                         <p class="texto-auxiliar">
                             <img class="icono-informacion"src="src/img/exclamation-circle-fill.svg" alt="Icono información">
                             Sólo letras minúsculas y sin acentos
                         </p>
                     </div>
                     <div class="botones">
-                        <button class="boton-principal encriptar">Encriptar</button>
-                        <button class="boton-principal desencriptar">Desencriptar</button>
+                        <input type="submit" class="boton-principal encriptar" name="enciptar_button" value="Encriptar">
+                        <input type="submit" class="boton-principal desencriptar" name="desenciptar_button" value="Desencriptar">
                     </div>
                 </form>
             </div>
