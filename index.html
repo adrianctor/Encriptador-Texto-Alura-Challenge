@@ -5,49 +5,64 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width">
         <title>Encriptador de texto</title>
-        <link rel="stylesheet" href="src/css/reset.css">
-        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="src/img/icono.png" />
+        <link rel="icon" type="image/x-icon" href="assets/img/icono.png" />
     </head>
     <body>
-        
-        <div class="principal">
-            <div class="formulario">
-                <header>
-                    <h1><img class="logo-header" src="src/img/logotipo.png" alt="Logo de Alura"></h1>
-                </header>
-                <form action="">
-                    <div class="centrado">
-                        <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="6" placeholder="Ingrese el texto aquí" wrap="hard" required></textarea>
-                        <p class="texto-auxiliar">
-                            <img class="icono-informacion"src="src/img/exclamation-circle-fill.svg" alt="Icono información">
-                            Sólo letras minúsculas y sin acentos
-                        </p>
-                    </div>
-                    <div class="botones">
-                        <input type="submit" class="boton-principal encriptar" name="enciptar_button" value="Encriptar">
-                        <input type="submit" class="boton-principal desencriptar" name="desenciptar_button" value="Desencriptar">
-                    </div>
-                </form>
-            </div>
-            <div class="bloque-resultado">
-                <div class="lista-resultados">
-                    <img class="imagen-resultado" src="src/img/muneco.png" alt="Animación de muñeco">
-                    <div>
-                        <p class="resultado">Ningún mensaje fue<br>encontrado</p>
-                        <p class="pista">Ingresa el texto que desees encriptar o<br>desencriptar.</p>
+        <main>
+            <div class="principal">
+                <div class="formulario">
+                    <header>
+                        <h1><img class="logo-header" src="assets/img/logotipo.png" alt="Logo de Alura"></h1>
+                    </header>
+                    <form action="">
+                        <div class="centrado">
+                            <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="6" placeholder="Ingrese el texto aquí" wrap="hard" required></textarea>
+                            <div class="mensaje-info">
+                                <img class="icono-informacion"src="assets/img/exclamation-circle-fill.svg" alt="Icono información">
+                                <p id="informacion">Sólo letras minúsculas y sin acentos</p>
+                            </div>
+                        </div>
+                        <div class="botones">
+                            <input id="btn_encriptar"type="button" class="boton-principal encriptar" name="btn_encriptar" value="Encriptar">
+                            <input id="btn_desencriptar" type="button" class="boton-principal desencriptar" name="btn_desencriptar" value="Desencriptar">
+                        </div>
+                    </form>
+                </div>
+                <div class="bloque-resultado">
+                    <div class="lista-resultados">                        
+                        <div class="contenido" id="salida-default">
+                            <img class="imagen-resultado" src="assets/img/muneco.png" alt="Animación de muñeco">
+                            <p class="resultado">Ningún mensaje fue<br>encontrado</p>
+                            <p class="pista">Ingresa el texto que desees encriptar o<br>desencriptar.</p>
+                        </div>
+                        <div class = "contenido invisible" id="resultado">
+                            <textarea name="text_out_area" id="texto-resultado" disabled></textarea>
+                            <button id="copiar">Copiar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <footer>
-            <p>© Todos los derechos reservados. Adrián Camilo Torres 2023 <a href="https://www.facebook.com/kamilo.torrez.9/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-              </svg></a> </p>
+        </main>
+        <footer class="pie-pagina">
+            <p>© 2023 Todos los derechos reservados por Adrián Camilo Torres | </p>
+            <a href="https://www.facebook.com/kamilo.torrez.9/">
+                <img src="assets/img/facebook.png" alt="Icono facebook" width="16px" weight="16px">
+            </a>
+            <a href="https://www.linkedin.com/in/adriantor-developer/">
+                <img src="assets/img/linkedin.png" alt="Icono linkedin" width="16px" weight="16px">
+            </a>
+            <a href="https://www.instagram.com/adrianctor/">
+                <img src="assets/img/instagram.png" alt="Icono linkedin" width="16px" weight="16px">
+            </a>
+            <a href="https://github.com/adrianctor">
+                <img src="assets/img/github.png" alt="Icono github" width="16px" weight="16px">
+            </a>
         </footer>
     </body>
-    <script ></script>
+    <script src="assets/js/index.js"></script>
 </html>
