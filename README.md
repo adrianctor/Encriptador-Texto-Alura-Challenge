@@ -1,8 +1,6 @@
 # Encriptador-Texto-Alura-Challenge
 ![image](https://user-images.githubusercontent.com/123501294/215875155-6c4cbf99-7376-44ca-98f3-d6493f34a192.png)
 
-
-
 # Descripción
 
 Encriptador de texto desarrollado con JavaScript, HTML y CSS para el challenge del Proyecto ONE de Oracle+Alura LATAM en el grupo G4.
@@ -36,3 +34,5 @@ El resultado debe ser mostrado en la pantalla.
 # Extras
 
 - Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
+
+Adrian Camilo Torres Gómez 2023

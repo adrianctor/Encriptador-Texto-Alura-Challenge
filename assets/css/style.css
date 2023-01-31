@@ -1,7 +1,7 @@
 body{
     font-family: 'Inter';
     font-style: normal;
-    background: #E5E5E5;
+    background: #F3F5FC;
 }
 .logo-header{
     margin: 40px 0 0 40px;
@@ -29,7 +29,7 @@ body{
 
     color: #0A3871;
     border: none;
-    background: #E5E5E5;
+    background: #F3F5FC;
     margin-top: 80px;
 }
 #texto-encriptar:focus{
