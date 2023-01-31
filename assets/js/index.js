@@ -1,10 +1,11 @@
+var area_default = document.querySelector("#salida-default");
+var area_resultado = document.querySelector("#resultado");
+var texto_resultado = document.querySelector("#texto-resultado");
+var taTexto = document.querySelector("#texto-encriptar");
+
 function encriptar(diccionario){
-    var taTexto = document.querySelector("#texto-encriptar");
     var traduccion = "";
     const texto = taTexto.value;
-    var area_default = document.querySelector("#salida-default");
-    var area_resultado = document.querySelector("#resultado");
-    var texto_resultado = document.querySelector("#texto-resultado");
     if(texto){
         for(var i=0; i < texto.length; i++){
             if(((texto[i] < 'a') || (texto[i] > 'z')) && (texto[i] != ' ')){
@@ -47,7 +48,6 @@ function encriptar(diccionario){
     return;
 }
 function desencriptar(resultado){
-    var texto = document.querySelector("#texto-encriptar");
     return;
 }
 
