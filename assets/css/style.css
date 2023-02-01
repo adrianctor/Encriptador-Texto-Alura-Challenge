@@ -1,15 +1,22 @@
+html{
+    height: 100%;
+}
 body{
+    height: 100%;
     font-family: 'Inter';
     font-style: normal;
     background: #F3F5FC;
 }
-.logo-header{
-    margin: 40px 0 0 40px;
-    border-radius: 0px;
-}
 .principal{
-    width: 1349px;
-    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.logo-header{
+    position: absolute;
+    margin: 40px 0 0 40px;
+    border-radius: 20px;
 }
 .formulario{
     width: 67%;
@@ -31,6 +38,9 @@ body{
     border: none;
     background: #F3F5FC;
     margin-top: 80px;
+}
+#texto-encriptar::-webkit-input-placeholder {
+    color: #0A3871;
 }
 #texto-encriptar:focus{
     outline: none;
@@ -229,4 +239,23 @@ footer > p{
 }
 footer > a {
     margin-left: 10px;
+}
+
+/*Tablet*/
+@media screen and (max-width:768px){
+    .principal{
+        height: 300vh;
+        flex-direction: column;
+        width: calc(100% - 80px);
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .formulario{
+        margin: 0;
+        width: calc(100% - 80px);
+        flex-basis: 50%;
+    }
+    .centrado{
+        margin-bottom: 0;
+    }
 }
