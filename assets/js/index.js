@@ -1,94 +1,56 @@
-var area_default = document.querySelector("#salida-default");
-var area_resultado = document.querySelector("#resultado");
-var texto_resultado = document.querySelector("#texto-resultado");
-var taTexto = document.querySelector("#texto-encriptar");
-var diccionario = {"a": "ai", "e": "enter", "i": "imes", "o": "ober", "u": "ufat"};
+const textArea = document.querySelector(".text-area");
+const mensaje = document.querySelector(".mensaje");
+const areaMensaje = document.querySelector(".area-mensaje");
+const areaCopiar = document.querySelector(".area-copiar");
+const matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
 
-function informarCaracteresEspeciales(){
-    document.querySelector("#informacion").style.color = "red";
-    document.querySelector(".icono-informacion").style.color = "red";
-    document.querySelector("#informacion").style.fontSize = "16px";
+function btnCopiar(){
+    navigator.clipboard.writeText(mensaje.value);
+    alert("El mesaje fue copiado al portapapeles");
 }
 
-function encriptar(diccionario){
-    var traduccion = "";
-    const texto = taTexto.value;
-    if(texto){
-        for(var i=0; i < texto.length; i++){
-            if(((texto[i] < 'a') || (texto[i] > 'z')) && (texto[i] != ' ')){
-                informarCaracteresEspeciales();
-                return;
-            }
-            else if((texto.length == 1 && texto == " ") || texto.replace(/ /g, "") == ""){
-                area_default.classList.remove("invisible");
-                area_resultado.classList.add("invisible");
-                return;
-            }
-            if(texto[i] == 'a'){
-                traduccion += diccionario["a"] ;
-            }
-            else if(texto[i] == 'e'){
-                traduccion += diccionario["e"];
-            }
-            else if(texto[i] == 'i'){
-                traduccion += diccionario["i"]; 
-            }
-            else if(texto[i] == 'o'){
-                traduccion += diccionario["o"]; 
-            }
-            else if(texto[i] == 'u'){
-                traduccion += diccionario["u"]; 
-            }
-            else{
-                traduccion += texto[i];
-            }
-        }
-        area_default.classList.add("invisible");
-        area_resultado.classList.remove("invisible");
-        texto_resultado.innerHTML = traduccion;
+function btnEncriptar(){
+    if (textArea.value) {
+        const textoEncriptado = encriptar(textArea.value);
+        mensaje.value = textoEncriptado;
+        textArea.value = "";
+        mensaje.style.backgroundImage = "none";
+        areaMensaje.classList.add('invisible');
     }
     else{
         alert("El mensaje no puede ir vacío");
     }
-    return;
 }
-function desencriptar(diccionario){
-    var texto = taTexto.value;
-    if(texto){
-        for(var i=0; i < texto.length; i++){
-            if(((texto[i] < 'a') || (texto[i] > 'z')) && (texto[i] != ' ')){
-                informarCaracteresEspeciales();
-                return;
-            }
-            else if((texto.length == 1 && texto == " ") || texto.replace(/ /g, "") == ""){
-                area_default.classList.remove("invisible");
-                area_resultado.classList.add("invisible");
-                return;
-            }
-        }
-        area_default.classList.add("invisible");
-        area_resultado.classList.remove("invisible");
-        texto = texto.replace(new RegExp(diccionario["a"], "g"), "a");
-        texto = texto.replace(new RegExp(diccionario["e"], "g"), "e");
-        texto = texto.replace(new RegExp(diccionario["i"], "g"), "i");
-        texto = texto.replace(new RegExp(diccionario["o"], "g"), "o");
-        texto = texto.replace(new RegExp(diccionario["u"], "g"), "u");
-        texto_resultado.innerHTML = texto;
+function btnDesencriptar(){
+    if (textArea.value) {
+        const textoDesencriptado = desencriptar(textArea.value);
+        mensaje.value = textoDesencriptado;
+        textArea.value = "";
+        mensaje.style.backgroundImage = "none";
+        areaMensaje.classList.add('invisible');
     }
     else{
         alert("El mensaje no puede ir vacío");
     }
-    return;
+}
+function encriptar(stringEncriptar){
+    stringEncriptar = stringEncriptar.toLowerCase();
+    for (let varIndice = 0; varIndice < matrizCodigo.length; varIndice++) {
+        if (stringEncriptar.includes(matrizCodigo[varIndice][0])){
+           stringEncriptar = stringEncriptar.replaceAll(matrizCodigo[varIndice][0],matrizCodigo[varIndice][1]);
+        }
+        areaCopiar.classList.remove("invisible");
+    }
+    return stringEncriptar;
 }
 
-function copiarTexto(){
-    const texto_resultado = document.querySelector("#texto-resultado");
-    navigator.clipboard.writeText(texto_resultado.value);
+function desencriptar(stringDesencriptar){
+    stringDesencriptar = stringDesencriptar.toLowerCase();
+    for (let varIndice = 0; varIndice < matrizCodigo.length; varIndice++) {
+        if (stringDesencriptar.includes(matrizCodigo[varIndice][1])) {
+            stringDesencriptar = stringDesencriptar.replaceAll(matrizCodigo[varIndice][1],matrizCodigo[varIndice][0]);
+        }
+        areaCopiar.classList.remove("invisible");
+    }
+    return stringDesencriptar;
 }
-
-const btnEncriptar = document.querySelector('#btn_encriptar');
-const btnDesencriptar = document.querySelector('#btn_desencriptar');
-const btnCopiar = document.querySelector('#copiar');
-btnEncriptar.addEventListener( 'click', function() {encriptar(diccionario);} );
-btnDesencriptar.addEventListener( 'click', function() {desencriptar(diccionario);} );
-btnCopiar.addEventListener( 'click', function() {copiarTexto();} );

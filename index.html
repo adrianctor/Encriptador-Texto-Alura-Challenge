@@ -1,72 +1,43 @@
 <!DOCTYPE html>
-
-<html lang="es">
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
-        <title>Encriptador de texto</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="assets/img/icono.png" />
-    </head>
-    <body>
-        <header>
-            <div class="principal">
-                <div class="logo-header">
-                    <img src="assets/img/logotipo.png" alt="Logo de Alura">
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logotipo.png" alt="logo de Alura" class="logo">
+    </header>
+    <main>
+        <section class="area-formulario">
+            <textarea class="text-area" cols="37" rows="6" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="area-informacion">
+                <img src="assets/img/exclamation-circle-fill.svg" alt="">
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
             </div>
-        </header>
-        <main>
-            <div class="principal">
-                <div class="formulario">
-                    <form action="">
-                        <div class="centrado">
-                            <textarea name="texto-encriptar" id="texto-encriptar" cols="30" rows="6" placeholder="Ingrese el texto aquí" wrap="hard" required></textarea>
-                            <div class="mensaje-info">
-                                <img class="icono-informacion"src="assets/img/exclamation-circle-fill.svg" alt="Icono información">
-                                <p id="informacion">Sólo letras minúsculas y sin acentos</p>
-                            </div>
-                        </div>
-                        <div class="botones">
-                            <input id="btn_encriptar"type="button" class="boton-principal encriptar" name="btn_encriptar" value="Encriptar">
-                            <input id="btn_desencriptar" type="button" class="boton-principal desencriptar" name="btn_desencriptar" value="Desencriptar">
-                        </div>
-                    </form>
-                </div>
-                <div class="bloque-resultado">
-                    <div class="lista-resultados">                        
-                        <div class="contenido" id="salida-default">
-                            <img class="imagen-resultado" src="assets/img/muneco.png" alt="Animación de muñeco">
-                            <p class="resultado">Ningún mensaje fue<br>encontrado</p>
-                            <p class="pista">Ingresa el texto que desees encriptar o<br>desencriptar.</p>
-                        </div>
-                        <div class = "contenido invisible" id="resultado">
-                            <textarea name="text_out_area" id="texto-resultado" disabled></textarea>
-                            <button id="copiar">Copiar</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
             </div>
-        </main>
-        <footer class="pie-pagina">
-            <p>© 2023 Todos los derechos reservados por Adrián Camilo Torres | </p>
-            <a href="https://www.facebook.com/kamilo.torrez.9/">
-                <img src="assets/img/facebook.png" alt="Icono facebook" width="16px" weight="16px">
-            </a>
-            <a href="https://www.linkedin.com/in/adriantor-developer/">
-                <img src="assets/img/linkedin.png" alt="Icono linkedin" width="16px" weight="16px">
-            </a>
-            <a href="https://www.instagram.com/adrianctor/">
-                <img src="assets/img/instagram.png" alt="Icono linkedin" width="16px" weight="16px">
-            </a>
-            <a href="https://github.com/adrianctor">
-                <img src="assets/img/github.png" alt="Icono github" width="16px" weight="16px">
-            </a>
-        </footer>
-    </body>
+        </section>
+        <section class="area-resultado">
+            <textarea class="mensaje" cols="20" rows="10" disabled></textarea>
+            <div class="area-mensaje">
+                <p class="texto-centrado">Ningún mensaje fue encontrado</p>
+                <p class="texto-centrado">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="area-copiar invisible">
+                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
     <script src="assets/js/index.js"></script>
+</body>
 </html>
