@@ -50,10 +50,10 @@ main{
     border-radius: 24px;
     color: #0A3871;
     margin-left: 5.857%;
-    margin-right: 1.465%;
+    /* margin-right: 1.465%; */
     margin-top: 2.197%;
     padding: 0 1.465%;
-    position: fixed;
+    position: absolute;
     resize: none;
     height: 92%;
     width: 23.21%;
@@ -63,7 +63,7 @@ main{
     outline: none;
 }
 .area-mensaje{
-    position: fixed;
+    position: absolute;
     margin-top: 65vh;
     background: transparent;
 }
@@ -219,14 +219,14 @@ footer > a {
 }
 @media screen and (max-width:412px){
     html{
-        max-width: 375px;
+        max-width: 412px;
         max-height: 933px;
     }
     body{
         margin: 0 0;
     }
     .logo{
-        width: 15%;
+        width: 20%;
         margin-top: 5%;
     }
     main{
@@ -239,26 +239,28 @@ footer > a {
     }
     .text-area{
         margin-top: 10vh;
+        margin-bottom: 1vh;
     }
     .botones{
         flex-direction: column;
+        margin-left: 7%;
     }
     .btn-desencriptar{
         margin-top: 1vh;
         margin-left: 0;
     }
     .area-mensaje{
-        margin-top: 10vh;
+        margin-top: 11vh;
+        
     }
     .mensaje{
-        margin: 5% 3vh;
-        width:51%;
-        height: 25vh;
+        margin: 3vh 3% 0 4%;
+        width: 90%;
+        height: 25.5vh;
         background-image: none;
     }
     .area-mensaje p:first-child{
-        margin-left: 25%;
-        
+        margin-left: 30%;
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
@@ -266,13 +268,13 @@ footer > a {
     }
     .area-mensaje p:nth-child(2){
         margin-left: 30%;
-        width: 60%;
+        width: 70%;
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
     }
     footer{
-        margin-left: 4%;
+        margin-left: 10%;
         display: block;
         flex-wrap: nowrap;
     }
