@@ -217,7 +217,7 @@ footer > a {
         margin-top: 29vh;
     }
 }
-@media screen and (max-width:375px){
+@media screen and (max-width:720px){
     html{
         max-width: 375px;
         max-height: 933px;
