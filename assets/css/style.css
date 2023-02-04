@@ -170,6 +170,9 @@ footer > a {
         margin-left:2%;
         margin-bottom: 15vh;
     }
+    .botones{
+        margin-left: 1%;
+    }
     .mensaje{
         margin: 5% 3vh;
         width: 88%;
@@ -182,7 +185,7 @@ footer > a {
         background: transparent;
     }
     .area-mensaje p:first-child{
-        margin-left: 46%;
+        margin-left: calc(46%);
         width: 100%;
         font-weight: 700;
         font-size: 28px;
@@ -198,9 +201,7 @@ footer > a {
     .area-informacion{
         margin-left: 2%;
     }
-    .botones{
-        margin-left: 1%;
-    }
+
     .area-copiar{
         margin: 0 0;
         width: 83%;
@@ -214,5 +215,72 @@ footer > a {
         position: fixed;
         margin-left: 21%;
         margin-top: 29vh;
+    }
+}
+@media screen and (max-width:375px){
+    html{
+        max-width: 375px;
+        max-height: 933px;
+    }
+    body{
+        margin: 0 0;
+    }
+    .logo{
+        width: 15%;
+        margin-top: 5%;
+    }
+    main{
+        margin: 0 0;
+        flex-direction: column;
+    }
+    .area-formulario{
+        width: 90%;
+        margin: 0 5%;
+    }
+    .text-area{
+        margin-top: 10vh;
+    }
+    .botones{
+        flex-direction: column;
+    }
+    .btn-desencriptar{
+        margin-top: 1vh;
+        margin-left: 0;
+    }
+    .area-mensaje{
+        margin-top: 10vh;
+    }
+    .mensaje{
+        margin: 5% 3vh;
+        width:51%;
+        height: 25vh;
+        background-image: none;
+    }
+    .area-mensaje p:first-child{
+        margin-left: 25%;
+        
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        width: 70%;
+    }
+    .area-mensaje p:nth-child(2){
+        margin-left: 30%;
+        width: 60%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    footer{
+        margin-left: 4%;
+        display: block;
+        flex-wrap: nowrap;
+    }
+    .mobile-icons{
+        margin-top: 2vh;
+    }
+    .mobile-icons>a>img{
+        width: 20px;
+        height: 20px;
     }
 }
