@@ -132,6 +132,21 @@ main{
     width: 286px;
     height: 67px;
 }
+footer {
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
+}
+footer > p{
+    font-weight: bold;
+}
+footer > a {
+    margin-left: 10px;
+}
 @media screen and (max-width:768px){
     html{
         max-width: 768px;
@@ -152,32 +167,39 @@ main{
         margin: 0 5%
     }
     .text-area{
-        margin-bottom: 28vh;
+        margin-left:2%;
+        margin-bottom: 15vh;
     }
     .mensaje{
         margin: 5% 3vh;
         width: 88%;
-        height: 15vh;
+        height: 25vh;
         background-image: none;
     }
     .area-mensaje{
         position: fixed;
-        margin: 8vh 0 0;
+        margin: 14vh 0 0;
         background: transparent;
     }
     .area-mensaje p:first-child{
-        margin-left: 42%;
+        margin-left: 46%;
         width: 100%;
         font-weight: 700;
         font-size: 28px;
         line-height: 120%;
     }
     .area-mensaje p:nth-child(2){
-        margin-left: 42%;
+        margin-left: 46%;
         width: 100%;
         font-weight: 400;
         font-size: 20px;
         line-height: 150%;
+    }
+    .area-informacion{
+        margin-left: 2%;
+    }
+    .botones{
+        margin-left: 1%;
     }
     .area-copiar{
         margin: 0 0;
@@ -186,6 +208,11 @@ main{
     .btn-copiar{
         width: 100%;
         margin-left: 10%;
-        margin-top: 37vh;
+        margin-top: 20vh;
+    }
+    footer{
+        position: fixed;
+        margin-left: 21%;
+        margin-top: 29vh;
     }
 }
